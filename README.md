@@ -1,7 +1,7 @@
-# :feelsgood: AirBnB Clone - Console :godmode:
+# :feelsgood: AirBnB Clone - Console :japanese_ogre:
 This project is the console part of a soon to be fully functional AirBnB clone for the Holberton School academy of coding
 
-## Usage
+## :volcano: Usage
 ```bash
 ./console.py # Use this to run the console, after that:
 ```
@@ -13,7 +13,7 @@ create <class> # This will create a new object of the available classes
 # This format will allow the user to choose an available class and command while passing parameters  to it
 <command> <class> <Optional> #This is an alternative for the previous format to input an available command
 ```
-## Non Interactive example
+## :ghost: Non Interactive example
 ```Bash
 echo "help" | ./console.py
 (hbnb)
@@ -22,8 +22,8 @@ Documented commands (type help <topic>):
 EOF  help  quit
 (hbnb)
 ```
-## Avaiable classes (models) and commands
-### Commands:
+## :mag: Avaiable classes (models) and commands
+### :key: Commands:
 ```show``` Displays information about an specific instance of a class: ```show <class> <id>```
 
 ```all``` Displays information about all available instances or all instances from an specific class: ```all <Optional: class>```
@@ -34,7 +34,7 @@ EOF  help  quit
 
 ```count``` Displays how many instances of a class are available: ```count <class>```
 
-### Classes
+### :books: Classes
 ```
 BaseModel
 User
@@ -44,15 +44,15 @@ State
 Place
 Review
 ```
-## File Storage
+## :floppy_disk: File Storage
 Flow of serialization-deserialization is:
 ```
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
 ```
 Handled in the engine folder.
-## Tests
+## :chart_with_upwards_trend: Tests
 All the tests were made with the module unittest, these are stored in the folder test_models
-## Authors
+## :shipit: Authors
 
 [Alejandro Ramirez](https://github.com/FatChiken277)
 
