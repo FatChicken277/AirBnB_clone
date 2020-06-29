@@ -1,6 +1,6 @@
 # :feelsgood: AirBnB Clone - Console :godmode:
 This project is the console part of a soon to be fully functional AirBnB clone for the Holberton School academy of coding
-```
+
 ## Usage
 ```bash
 ./console.py # Use this to run the console, after that:
