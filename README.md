@@ -1,4 +1,4 @@
-# AirBnB Clone - Console
+# :feelsgood: AirBnB Clone - Console :godmode:
 This project is the console part of a soon to be fully functional AirBnB clone for the Holberton School academy of coding
 ```
 ## Usage
@@ -25,10 +25,15 @@ EOF  help  quit
 ## Avaiable classes (models) and commands
 ### Commands:
 ```show``` Displays information about an specific instance of a class: ```show <class> <id>```
+
 ```all``` Displays information about all available instances or all instances from an specific class: ```all <Optional: class>```
+
 ```update``` Updates the attributes from an specific instance: ```update <class> <id> <Name of attribute or dictionary -Only available in the other format> <Not necessary in case of dictionary: Value of attribute```
+
 ```destroy``` Eliminates an instance: ```destroy <class> <id>```
+
 ```count``` Displays how many instances of a class are available: ```count <class>```
+
 ### Classes
 ```
 BaseModel
@@ -48,5 +53,7 @@ Handled in the engine folder.
 ## Tests
 All the tests were made with the module unittest, these are stored in the folder test_models
 ## Authors
+
 [Alejandro Ramirez](https://github.com/FatChiken277)
+
 [Sebastian Escobar](https://github.com/Katorea132)
