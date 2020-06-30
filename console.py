@@ -34,7 +34,7 @@ line interpretation
         lili = lili.replace(": ", ":")
         lili = lili.split()
         trex = r"\w+[.]\w+\(.*\)$"
-        if comm and search(trex, lili[0]):
+        if comm and lili and search(trex, lili[0]):
             lili = lili[0].split(".", 1)
             lilium = lili[1].replace("(", " ")
             lilium = lilium.replace(")", "")
