@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Test file storage class.
+"""
 import unittest
 import json
 import os
@@ -17,6 +19,8 @@ from models.review import Review
 
 
 class TestFileStorage(unittest.TestCase):
+    """This class test all about file storage.
+    """
 
     models = {"BaseModel": BaseModel, "User": User,
               "City": City, "Amenity": Amenity,
@@ -24,6 +28,8 @@ class TestFileStorage(unittest.TestCase):
               "State": State}
 
     def setUp(self):
+        """Clean code after each test.
+        """
         if os.path.isfile("file.json"):
             os.remove("file.json")
         FileStorage._FileStorage__objects = {}
@@ -46,6 +52,8 @@ class TestFileStorage(unittest.TestCase):
         self.assertIsNotNone(FileStorage.reload.__doc__)
 
     def test_inittest(self):
+        """Test init method.
+        """
         with self.assertRaises(TypeError) as err:
             FileStorage.__init__()
         msg = "descriptor '__init__' of 'object' object needs an argument"
@@ -56,6 +64,8 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(str(err.exception), msg)
 
     def test_attributes(self):
+        """Test class attributes.
+        """
         trex = r"\w+\.json"
         path = storage._FileStorage__file_path
         self.assertTrue(hasattr(FileStorage, "_FileStorage__file_path"))
@@ -68,6 +78,8 @@ class TestFileStorage(unittest.TestCase):
         self.assertTrue(storage.all() is obj)
 
     def test_all(self):
+        """Test all method.
+        """
         self.assertIsInstance(storage.all(), dict)
         self.assertTrue(storage.all() is storage._FileStorage__objects)
 
@@ -82,6 +94,8 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(str(err.exception), msg)
 
     def test_new(self):
+        """Test new method.
+        """
         for k, v in TestFileStorage.models.items():
             a = v()
             storage.new(a)
@@ -100,6 +114,8 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(str(err.exception), msg)
 
     def test_save(self):
+        """Test save method.
+        """
         a = 0
         for k, v in TestFileStorage.models.items():
             new_obj = v()
@@ -121,6 +137,8 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(str(err.exception), msg)
 
     def test_reload(self):
+        """Test reload method.
+        """
         for k, v in TestFileStorage.models.items():
             new_obj = v()
             no_id = new_obj.id
