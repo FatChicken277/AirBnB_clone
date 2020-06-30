@@ -151,7 +151,6 @@ line interpretation
                 if key not in storage.all():
                     print("** no instance found **")
                 elif leni > 3:
-                    # lili[3] = lili[3].replace('"', '')
                     alf, numi = "[a-zA-Z]", r"[0-9]\.[0-9]"
                     if '"' in lili[3]:
                         lili[3] = lili[3].replace('"', '')
