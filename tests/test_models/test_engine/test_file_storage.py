@@ -158,5 +158,6 @@ class TestFileStorage(unittest.TestCase):
         msg = "reload() missing 1 required positional argument: 'self'"
         self.assertEqual(str(err.exception), msg)
 
+
 if __name__ == "__main__":
     unittest.main()
