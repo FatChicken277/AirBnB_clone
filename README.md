@@ -45,7 +45,7 @@ Place
 Review
 ```
 ## :floppy_disk: File Storage
-Flow of serialization-deserialization is:
+Flow of serialization-deserialization is the following:
 ```
 <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
 ```
